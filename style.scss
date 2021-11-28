@@ -1,0 +1,450 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#price {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+}
+
+.pagewrapper {
+  overflow: hidden;
+  width: 100vw;
+  .navbar {
+    height: 6vh;
+    color: white;
+    background-color: #7c7676;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "navbarsection1 navbarsection2";
+
+    .navbarsection1 {
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      grid-area: navbarsection1;
+
+      width: 100%;
+
+      ul {
+        margin-right: 100px;
+        li {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          display: inline-block;
+          list-style: block;
+          list-style-type: none;
+
+          a{
+            color: white;
+            text-decoration: none;
+          }
+
+          img {
+            width: 20%;
+          }
+        }
+        :hover {
+          cursor: crosshair;
+        }
+      }
+    }
+
+    .navbarsection2 {
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      grid-area: navbarsection2;
+      text-align: right;
+
+      width: 100%;
+
+      ul {
+        margin-right: 100px;
+        li {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          display: inline-block;
+          list-style: block;
+          list-style-type: none;
+
+          a{
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .customizewrapper {
+    height: 95vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "section1 section2";
+
+    .section1 {
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      grid-area: section1;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 90% 10%;
+      grid-template-areas: "img" "footer";
+
+      .imgPlceholder {
+        text-align: center;
+        margin-top: 160px;
+        img {
+          grid-area: img;
+          width: 80%;
+        }
+      }
+
+      .footerDetails {
+        
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "detail1 detail2 detail3";
+
+        ul {
+          margin-top: -50px;
+          list-style: none;
+        }
+        .detail1 {
+          grid-area: detail1;
+        }
+
+        .detail2 {
+          grid-area: detail2;
+        }
+
+        .detail3 {
+          grid-area: detail3;
+        }
+      }
+    }
+
+    .section2 {
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      grid-area: section2;
+      height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 20% 60% 10%;
+      grid-template-areas: "head" "innerContent" "footer";
+
+      .head {
+        padding: 100px 8%;
+        grid-area: head;
+        text-align: center;
+      }
+
+      .innerContent {
+        padding: 100px 8%;
+        grid-area: innerContent;
+        text-align: left;
+
+        .cart{
+          text-align: center;
+
+          img {
+            width: 10%;
+            opacity: 0.1;
+          }
+        }
+
+        form{
+          input{
+            color: white;
+            
+            font-family: ProductSans-Medium, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid #fafafa;
+            padding: 5%;
+            width: 90%;
+            
+          }
+  
+          textarea{
+            color: white;
+            font-family: ProductSans-Medium, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid #fafafa;
+            padding: 5%;
+            width: 90%;
+          }
+  
+          button{
+            color: white;
+            font-family: ProductSans-Medium, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid white;
+            padding: 5%;
+            width: 390px;
+          }
+        }
+
+        h3{
+          opacity: 0.3;
+        }
+
+        .btndescust {
+          border: none;
+          background-color: #fafafa;
+          width: 100%;
+          padding: 1vw;
+          border-radius: 30px;
+
+          strong{
+            color: green;
+          }
+        }
+
+        .active{
+          border: 3px solid #6D93E6;
+        }
+
+        ul {
+          li {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            display: inline-block;
+            list-style: block;
+            list-style-type: none;
+
+            .circlePaintBox1 {
+              display: block;
+              background-color: white;
+              height: 20px;
+              width: 20px;
+              border-radius: 100%;
+              border: 3px solid #fafafa;
+            }
+
+            .circlePaintBox2 {
+              display: block;
+              background-color: red;
+              height: 20px;
+              width: 20px;
+              border-radius: 100%;
+              border: 3px solid #fafafa;
+            }
+
+            .active{
+              border: 3px solid #6D93E6;
+            }
+          }
+        }
+      }
+
+      .footer {
+        padding: 100px 8%;
+        grid-area: footer;
+
+        .btnDes {
+          background-color: none;
+          border: 1px solid gray;
+          border-radius: 30px;
+          width: 100%;
+          padding: 1vw;
+        }
+      }
+    }
+  }
+
+  .mininav {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    width: 100vw;
+    height: 6vh;
+    background-color: #574f4f;
+    color: white;
+    text-align: center;
+
+    ul {
+      li {
+        margin-top: -50px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: inline-block;
+        list-style: block;
+        list-style-type: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .jumbotron {
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . car" "jumbotronContent . car" ". . car";
+
+    .jumbotronContent {
+      opacity: 0;
+      width: 50vw;
+      grid-area: jumbotronContent;
+
+      .btnDes {
+        background-color: none;
+        border: 1px solid gray;
+        border-radius: 30px;
+        margin-left: 8vw;
+        padding: 1vw;
+      }
+
+      h1 {
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 8vw;
+      }
+    }
+
+    .car {
+      opacity: 0;
+      grid-area: car;
+      position: relative;
+      top: 100px;
+      width: 100vw;
+    }
+  }
+
+  .secondSection {
+    background-size: cover;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+      url("modelXBg1.png");
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . ." ". . sectionContent" ". . .";
+
+    h1{
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .sectionContent {
+      margin-top: -100px;
+      grid-area: sectionContent;
+    }
+  }
+
+  .secondSectionv2 {
+    background-size: cover;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+      url("modelSBg1.jpg");
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . ." ". . sectionContent" ". . .";
+
+    h1{
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .sectionContent {
+      margin-top: -100px;
+      grid-area: sectionContent;
+    }
+  }
+
+  .thirdSection {
+    background-size: cover;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+      url("modelXBg2.png");
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . ." ". sectionContent . " ". . .";
+
+    h1{
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .sectionContent {
+      text-align: center;
+      grid-area: sectionContent;
+
+      .btnDes {
+        background-color: none;
+        border: 1px solid gray;
+        border-radius: 30px;
+        padding: 1vw;
+      }
+    }
+  }
+
+  .thirdSectionv2 {
+    background-size: cover;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+      url("modelsbg2.jpg");
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . ." ". sectionContent . " ". . .";
+
+    h1{
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .sectionContent {
+      text-align: center;
+      grid-area: sectionContent;
+
+      .btnDes {
+        background-color: none;
+        border: 1px solid gray;
+        border-radius: 30px;
+        padding: 1vw;
+      }
+    }
+  }
+}
